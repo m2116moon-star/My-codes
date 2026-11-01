@@ -54,3 +54,39 @@ def soqot(v0,v_max):
         if v >= v_max:
             return(f"arrived in {t} s")
     return(f"not arrived")    
+    
+#  تابع روی لیست
+# تابعی که بیشترین مقدار لیست را برمیگرداند
+def bozorgtarin(liste):
+    if len(liste) == 0:
+        return None
+    bozorg = liste[0]   # فرض کن اولی بزرگترین است
+    for x in liste:
+        if x > bozorg:
+            bozorg = x   # هرجا بزرگتر پیدا کردی به روزرسانی کن
+    return bozorg        
+
+# کوچکترین و بزرگترین
+def kamtar_bishtar(list):
+    if len(list) == 0:
+        return None
+    kamtar = list[0]
+    bishtar = list[0]
+    for z in list:
+        if z < kamtar:
+            kamtar = z
+        if z > bishtar:
+            bishtar = z
+    return (kamtar, bishtar)
+
+#  شمارش اعداد زوج
+def tot_zoj(list_1):
+    i = 0
+    for n in list_1:
+        if n % 2 == 0:
+            i += 1
+    if i == 0:
+        return None
+    return i       
+
+
