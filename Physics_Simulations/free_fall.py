@@ -72,3 +72,13 @@ def save_file(ertefa, zaman):
             f.write(f"  {ertefa[i]}  |   {zaman[i]}    |   {z_s:.3f}   |   {khata_0:.3f}\n")
 
 save_file(ertefa, zaman)
+#  رسم نمودار
+plt.plot(zaman, ertefa, color='green', linewidth=2)
+
+plt.title(" آزمایش سقوط آزاد ")
+plt.xlabel(" زمان(ثانیه) ")
+plt.ylabel(" ارتفاع(متر)")
+
+plt.grid(True, alpha = 0.4)
+plt.savefig("free_fall_graph.png", dpi=100)
+plt.show()
